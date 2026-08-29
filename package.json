@@ -4,9 +4,10 @@
   "description": "Team Workload Visibility & Rebalancing Agent",
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
-    "start": "tsx src/index.ts",
-    "build": "tsc",
+    "dev": "concurrently -n \"API,UI\" -c \"blue,green\" \"tsx watch src/index.ts\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client && tsc",
+    "start": "node dist/index.js",
+    "postinstall": "npm install --prefix client",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -18,6 +19,7 @@
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.2",
     "@types/uuid": "^10.0.0",
+    "concurrently": "^10.0.5",
     "tsx": "^4.19.4",
     "typescript": "^5.7.3"
   }

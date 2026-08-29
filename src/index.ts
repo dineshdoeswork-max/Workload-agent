@@ -15,11 +15,17 @@ import projectRoutes from "./routes/projects.js";
 const app = express();
 const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3001;
 
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 // ── Middleware ──
 app.use(cors());
 app.use(express.json());
 
-// ── Routes ──
+// ── API Routes ──
 app.use("/api/analysis", analysisRoutes);
 app.use("/api/team-members", teamMemberRoutes);
 app.use("/api/tasks", taskRoutes);
@@ -28,6 +34,29 @@ app.use("/api/projects", projectRoutes);
 // ── Health check ──
 app.get("/api/health", (_req, res) => {
   res.json({ status: "ok", timestamp: new Date().toISOString() });
+});
+
+// ── Static Frontend Files ──
+// Serves compiled React app from client/dist if built
+const clientDistPath = path.resolve(__dirname, "../../client/dist");
+const clientDistLocal = path.resolve(__dirname, "../client/dist");
+const activeDistPath = path.resolve(__dirname, "../client/dist");
+
+app.use(express.static(clientDistLocal));
+app.use(express.static(clientDistPath));
+
+// Fallback to client/dist/index.html for client-side routing
+app.get("*", (req, res, next) => {
+  if (req.path.startsWith("/api")) {
+    return next();
+  }
+  res.sendFile(path.join(clientDistLocal, "index.html"), (err) => {
+    if (err) {
+      res.sendFile(path.join(clientDistPath, "index.html"), (err2) => {
+        if (err2) next();
+      });
+    }
+  });
 });
 
 // ── Notification placeholder ──
