@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "description": "Team Workload Visibility & Rebalancing Agent",
   "type": "module",
+  "workspaces": [
+    "client"
+  ],
   "scripts": {
     "dev": "concurrently -n \"API,UI\" -c \"blue,green\" \"tsx watch src/index.ts\" \"npm run dev --prefix client\"",
     "build": "npm run build --prefix client && tsc",
     "start": "node dist/index.js",
-    "postinstall": "npm install --prefix client",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -19,8 +21,8 @@
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.2",
     "@types/uuid": "^10.0.0",
-    "@vercel/node": "^10.0.0",
-    "concurrently": "^10.0.5",
+    "@vercel/node": "^5.1.8",
+    "concurrently": "^9.1.2",
     "tsx": "^4.19.4",
     "typescript": "^5.7.3"
   }
