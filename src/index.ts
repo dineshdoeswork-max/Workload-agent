@@ -70,17 +70,19 @@ export async function sendNotification(
   // Replace with real Slack/email integration in v2
 }
 
-// ── Start ──
-app.listen(PORT, () => {
-  console.log(`\n🚀 Workload Agent API running on http://localhost:${PORT}`);
-  console.log(`\n  Endpoints:`);
-  console.log(`    GET  /api/health          — Health check`);
-  console.log(`    GET  /api/analysis         — Run full workload analysis`);
-  console.log(`    GET  /api/analysis?date=YYYY-MM-DD — Analysis with custom date`);
-  console.log(`    CRUD /api/team-members     — Team member management`);
-  console.log(`    CRUD /api/tasks            — Task management`);
-  console.log(`    CRUD /api/projects         — Project management`);
-  console.log(`\n  Seed data loaded: 6 team members, 16 tasks, 3 projects\n`);
-});
+// ── Start Server (when run as standalone process, not serverless) ──
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`\n🚀 Workload Agent API running on http://localhost:${PORT}`);
+    console.log(`\n  Endpoints:`);
+    console.log(`    GET  /api/health          — Health check`);
+    console.log(`    GET  /api/analysis         — Run full workload analysis`);
+    console.log(`    GET  /api/analysis?date=YYYY-MM-DD — Analysis with custom date`);
+    console.log(`    CRUD /api/team-members     — Team member management`);
+    console.log(`    CRUD /api/tasks            — Task management`);
+    console.log(`    CRUD /api/projects         — Project management`);
+    console.log(`\n  Seed data loaded: 6 team members, 16 tasks, 3 projects\n`);
+  });
+}
 
 export default app;
