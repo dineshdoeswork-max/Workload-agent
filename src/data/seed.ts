@@ -2,9 +2,9 @@
 // Seed Data
 // Includes:
 // - Ayush Verma, Samir Joshi: all tasks done → idle pool
-// - Dinesh Kumar: 66h active, 40h capacity, deadline 2026-09-12 → overloaded / critical
+// - Dinesh Rajpurohit: 66h active, 40h capacity, deadline 2026-09-12 → overloaded / critical
 // - Ranveer Singh: 62h active, 40h capacity, deadline 2026-09-15 → overloaded / critical
-// - Shreya Iyer: 66h due by 2026-09-12, 35h/week capacity → at-risk (remaining
+// - Shreyash Iyer: 66h due by 2026-09-12, 35h/week capacity → at-risk (remaining
 //   effort narrowly exceeds available time before deadline)
 // - Vijay Menon: 60h due by 2026-09-10, 35h/week capacity → at-risk, same pattern
 // - Shruti Reddy: t7 blocked since 2026-08-10 → staleness flag
@@ -51,7 +51,7 @@ export const seedProjects: Project[] = [
 export const seedTeamMembers: TeamMember[] = [
   {
     id: "tm_1",
-    name: "Dinesh Kumar",
+    name: "Dinesh Rajpurohit",
     role: "Backend Dev",
     weeklyCapacityHours: 40,
     skills: ["node", "backend", "api"],
@@ -75,7 +75,7 @@ export const seedTeamMembers: TeamMember[] = [
   },
   {
     id: "tm_4",
-    name: "Shreya Iyer",
+    name: "Shreyash Iyer",
     role: "Full-stack Dev",
     weeklyCapacityHours: 35,
     skills: ["react", "node", "fullstack"],
@@ -188,7 +188,7 @@ export const seedTeamMembers: TeamMember[] = [
 ];
 
 export const seedTasks: Task[] = [
-  // ── Dinesh Kumar (tm_1): 66h active, 40h capacity, deadline 2026-09-12 → overloaded / critical ──
+  // ── Dinesh Rajpurohit (tm_1): 66h active, 40h capacity, deadline 2026-09-12 → overloaded / critical ──
   {
     id: "t1",
     title: "Sync engine core logic",
@@ -306,7 +306,7 @@ export const seedTasks: Task[] = [
     updatedAt: NOW,
   },
 
-  // ── Shreya Iyer (tm_4): 66h due by 2026-09-12, 35h/week capacity → at-risk ──
+  // ── Shreyash Iyer (tm_4): 66h due by 2026-09-12, 35h/week capacity → at-risk ──
   {
     id: "t9",
     title: "Ticket dashboard UI",
