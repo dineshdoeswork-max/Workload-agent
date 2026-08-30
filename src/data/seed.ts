@@ -1,16 +1,16 @@
 // ─────────────────────────────────────────────────────────────
 // Seed Data
 // Includes:
-// - Ayush, Sam: all tasks done → idle pool
-// - Dinesh: 66h active, 40h capacity, deadline 2026-09-12 → overloaded / critical
-// - Ranveer: 62h active, 40h capacity, deadline 2026-09-15 → overloaded / critical
-// - Shreya: 66h due by 2026-09-12, 35h/week capacity → at-risk (remaining
+// - Ayush Verma, Samir Joshi: all tasks done → idle pool
+// - Dinesh Kumar: 66h active, 40h capacity, deadline 2026-09-12 → overloaded / critical
+// - Ranveer Singh: 62h active, 40h capacity, deadline 2026-09-15 → overloaded / critical
+// - Shreya Iyer: 66h due by 2026-09-12, 35h/week capacity → at-risk (remaining
 //   effort narrowly exceeds available time before deadline)
-// - Vijay: 60h due by 2026-09-10, 35h/week capacity → at-risk, same pattern
-// - Shruti: t7 blocked since 2026-08-10 → staleness flag
-// - Sanjay: t34 blocked since 2026-08-12 → staleness flag
-// - Aishwarya, Nitish, Mahi: light load, devops/backend skills → idle / available pool
-// - Lucky, Kittu, Gunita, Bhavik, Ajay, Virat: balanced-to-light load
+// - Vijay Menon: 60h due by 2026-09-10, 35h/week capacity → at-risk, same pattern
+// - Shruti Reddy: t7 blocked since 2026-08-10 → staleness flag
+// - Sanjay Gupta: t34 blocked since 2026-08-12 → staleness flag
+// - Aishwarya Nair, Nitish Rao, Mahi Kapoor: light load, devops/backend skills → idle / available pool
+// - Rohit Malhotra, Karan Mehta, Gunita Chopra, Bhavik Patel, Ajay Bhatt, Virat Desai: balanced-to-light load
 // ─────────────────────────────────────────────────────────────
 
 import type { TeamMember, Task, Project } from "../models/types.js";
@@ -51,7 +51,7 @@ export const seedProjects: Project[] = [
 export const seedTeamMembers: TeamMember[] = [
   {
     id: "tm_1",
-    name: "Dinesh",
+    name: "Dinesh Kumar",
     role: "Backend Dev",
     weeklyCapacityHours: 40,
     skills: ["node", "backend", "api"],
@@ -59,7 +59,7 @@ export const seedTeamMembers: TeamMember[] = [
   },
   {
     id: "tm_2",
-    name: "Ayush",
+    name: "Ayush Verma",
     role: "Frontend Dev",
     weeklyCapacityHours: 40,
     skills: ["react", "frontend"],
@@ -67,7 +67,7 @@ export const seedTeamMembers: TeamMember[] = [
   },
   {
     id: "tm_3",
-    name: "Lucky",
+    name: "Rohit Malhotra",
     role: "QA Engineer",
     weeklyCapacityHours: 40,
     skills: ["testing", "qa"],
@@ -75,7 +75,7 @@ export const seedTeamMembers: TeamMember[] = [
   },
   {
     id: "tm_4",
-    name: "Shreya",
+    name: "Shreya Iyer",
     role: "Full-stack Dev",
     weeklyCapacityHours: 35,
     skills: ["react", "node", "fullstack"],
@@ -83,7 +83,7 @@ export const seedTeamMembers: TeamMember[] = [
   },
   {
     id: "tm_5",
-    name: "Aishwarya",
+    name: "Aishwarya Nair",
     role: "DevOps Engineer",
     weeklyCapacityHours: 30,
     skills: ["devops", "backend", "infra"],
@@ -91,7 +91,7 @@ export const seedTeamMembers: TeamMember[] = [
   },
   {
     id: "tm_6",
-    name: "Shruti",
+    name: "Shruti Reddy",
     role: "Backend Dev",
     weeklyCapacityHours: 40,
     skills: ["node", "backend", "database"],
@@ -99,7 +99,7 @@ export const seedTeamMembers: TeamMember[] = [
   },
   {
     id: "tm_7",
-    name: "Kittu",
+    name: "Karan Mehta",
     role: "Frontend Dev",
     weeklyCapacityHours: 32,
     skills: ["react", "frontend"],
@@ -107,7 +107,7 @@ export const seedTeamMembers: TeamMember[] = [
   },
   {
     id: "tm_8",
-    name: "Gunita",
+    name: "Gunita Chopra",
     role: "Backend Dev",
     weeklyCapacityHours: 40,
     skills: ["backend", "api", "docs"],
@@ -115,7 +115,7 @@ export const seedTeamMembers: TeamMember[] = [
   },
   {
     id: "tm_9",
-    name: "Sam",
+    name: "Samir Joshi",
     role: "Frontend Dev",
     weeklyCapacityHours: 40,
     skills: ["react", "frontend"],
@@ -123,7 +123,7 @@ export const seedTeamMembers: TeamMember[] = [
   },
   {
     id: "tm_10",
-    name: "Ranveer",
+    name: "Ranveer Singh",
     role: "Backend Dev",
     weeklyCapacityHours: 40,
     skills: ["node", "backend", "api"],
@@ -131,7 +131,7 @@ export const seedTeamMembers: TeamMember[] = [
   },
   {
     id: "tm_11",
-    name: "Bhavik",
+    name: "Bhavik Patel",
     role: "QA Engineer",
     weeklyCapacityHours: 40,
     skills: ["testing", "qa"],
@@ -139,7 +139,7 @@ export const seedTeamMembers: TeamMember[] = [
   },
   {
     id: "tm_12",
-    name: "Nitish",
+    name: "Nitish Rao",
     role: "DevOps Engineer",
     weeklyCapacityHours: 30,
     skills: ["devops", "backend", "infra"],
@@ -147,7 +147,7 @@ export const seedTeamMembers: TeamMember[] = [
   },
   {
     id: "tm_13",
-    name: "Vijay",
+    name: "Vijay Menon",
     role: "Backend Dev",
     weeklyCapacityHours: 35,
     skills: ["node", "backend", "database"],
@@ -155,7 +155,7 @@ export const seedTeamMembers: TeamMember[] = [
   },
   {
     id: "tm_14",
-    name: "Sanjay",
+    name: "Sanjay Gupta",
     role: "Full-stack Dev",
     weeklyCapacityHours: 40,
     skills: ["react", "node", "fullstack"],
@@ -163,7 +163,7 @@ export const seedTeamMembers: TeamMember[] = [
   },
   {
     id: "tm_15",
-    name: "Ajay",
+    name: "Ajay Bhatt",
     role: "Frontend Dev",
     weeklyCapacityHours: 40,
     skills: ["react", "frontend"],
@@ -171,7 +171,7 @@ export const seedTeamMembers: TeamMember[] = [
   },
   {
     id: "tm_16",
-    name: "Mahi",
+    name: "Mahi Kapoor",
     role: "Backend Dev",
     weeklyCapacityHours: 30,
     skills: ["backend", "api", "docs"],
@@ -179,7 +179,7 @@ export const seedTeamMembers: TeamMember[] = [
   },
   {
     id: "tm_17",
-    name: "Virat",
+    name: "Virat Desai",
     role: "QA Engineer",
     weeklyCapacityHours: 40,
     skills: ["testing", "qa"],
@@ -188,7 +188,7 @@ export const seedTeamMembers: TeamMember[] = [
 ];
 
 export const seedTasks: Task[] = [
-  // ── Dinesh (tm_1): 66h active, 40h capacity, deadline 2026-09-12 → overloaded / critical ──
+  // ── Dinesh Kumar (tm_1): 66h active, 40h capacity, deadline 2026-09-12 → overloaded / critical ──
   {
     id: "t1",
     title: "Sync engine core logic",
@@ -232,7 +232,7 @@ export const seedTasks: Task[] = [
     updatedAt: NOW,
   },
 
-  // ── Lucky (tm_3): moderate load → balanced ──
+  // ── Rohit Malhotra (tm_3): moderate load → balanced ──
   {
     id: "t4",
     title: "QA test plan for sync",
@@ -276,7 +276,7 @@ export const seedTasks: Task[] = [
     updatedAt: NOW,
   },
 
-  // ── Shruti (tm_6): t7 blocked since 2026-08-10 → staleness flag ──
+  // ── Shruti Reddy (tm_6): t7 blocked since 2026-08-10 → staleness flag ──
   {
     id: "t7",
     title: "Legacy DB migration script",
@@ -306,7 +306,7 @@ export const seedTasks: Task[] = [
     updatedAt: NOW,
   },
 
-  // ── Shreya (tm_4): 66h due by 2026-09-12, 35h/week capacity → at-risk ──
+  // ── Shreya Iyer (tm_4): 66h due by 2026-09-12, 35h/week capacity → at-risk ──
   {
     id: "t9",
     title: "Ticket dashboard UI",
@@ -350,7 +350,7 @@ export const seedTasks: Task[] = [
     updatedAt: NOW,
   },
 
-  // ── Kittu (tm_7): light load → underloaded ──
+  // ── Karan Mehta (tm_7): light load → underloaded ──
   {
     id: "t12",
     title: "Support portal navbar",
@@ -394,7 +394,7 @@ export const seedTasks: Task[] = [
     updatedAt: NOW,
   },
 
-  // ── Gunita (tm_8): moderate-to-light load ──
+  // ── Gunita Chopra (tm_8): moderate-to-light load ──
   {
     id: "t15",
     title: "API docs for support endpoints",
@@ -424,7 +424,7 @@ export const seedTasks: Task[] = [
     updatedAt: NOW,
   },
 
-  // ── Ayush (tm_2): all tasks done → idle ──
+  // ── Ayush Verma (tm_2): all tasks done → idle ──
   {
     id: "t17",
     title: "Chart components",
@@ -468,7 +468,7 @@ export const seedTasks: Task[] = [
     updatedAt: NOW,
   },
 
-  // ── Aishwarya (tm_5): light load, devops/backend skills → underloaded / available pool ──
+  // ── Aishwarya Nair (tm_5): light load, devops/backend skills → underloaded / available pool ──
   {
     id: "t20",
     title: "Deployment pipeline for analytics",
@@ -498,7 +498,7 @@ export const seedTasks: Task[] = [
     updatedAt: NOW,
   },
 
-  // ── Sam (tm_9): all tasks done → idle ──
+  // ── Samir Joshi (tm_9): all tasks done → idle ──
   {
     id: "t22",
     title: "Payment retry UI",
@@ -528,7 +528,7 @@ export const seedTasks: Task[] = [
     updatedAt: NOW,
   },
 
-  // ── Ranveer (tm_10): 62h active, 40h capacity, deadline 2026-09-15 → overloaded / critical ──
+  // ── Ranveer Singh (tm_10): 62h active, 40h capacity, deadline 2026-09-15 → overloaded / critical ──
   {
     id: "t24",
     title: "Ledger reconciliation service",
@@ -572,7 +572,7 @@ export const seedTasks: Task[] = [
     updatedAt: NOW,
   },
 
-  // ── Bhavik (tm_11): balanced load ──
+  // ── Bhavik Patel (tm_11): balanced load ──
   {
     id: "t27",
     title: "QA test plan for payments",
@@ -616,7 +616,7 @@ export const seedTasks: Task[] = [
     updatedAt: NOW,
   },
 
-  // ── Nitish (tm_12): light load, devops/backend skills → idle / available pool ──
+  // ── Nitish Rao (tm_12): light load, devops/backend skills → idle / available pool ──
   {
     id: "t30",
     title: "Payments monitoring dashboards",
@@ -632,7 +632,7 @@ export const seedTasks: Task[] = [
     updatedAt: NOW,
   },
 
-  // ── Vijay (tm_13): 60h due by 2026-09-10, 35h/week capacity → at-risk ──
+  // ── Vijay Menon (tm_13): 60h due by 2026-09-10, 35h/week capacity → at-risk ──
   {
     id: "t31",
     title: "Currency conversion service",
@@ -676,7 +676,7 @@ export const seedTasks: Task[] = [
     updatedAt: NOW,
   },
 
-  // ── Sanjay (tm_14): t34 blocked since 2026-08-12 → staleness flag ──
+  // ── Sanjay Gupta (tm_14): t34 blocked since 2026-08-12 → staleness flag ──
   {
     id: "t34",
     title: "Multi-currency wallet migration",
@@ -706,7 +706,7 @@ export const seedTasks: Task[] = [
     updatedAt: NOW,
   },
 
-  // ── Ajay (tm_15): light-to-balanced load ──
+  // ── Ajay Bhatt (tm_15): light-to-balanced load ──
   {
     id: "t36",
     title: "Payments settings UI",
@@ -736,7 +736,7 @@ export const seedTasks: Task[] = [
     updatedAt: NOW,
   },
 
-  // ── Mahi (tm_16): light load, backend/api skills → idle / available pool ──
+  // ── Mahi Kapoor (tm_16): light load, backend/api skills → idle / available pool ──
   {
     id: "t39",
     title: "API rate limit docs",
@@ -752,7 +752,7 @@ export const seedTasks: Task[] = [
     updatedAt: NOW,
   },
 
-  // ── Virat (tm_17): balanced load ──
+  // ── Virat Desai (tm_17): balanced load ──
   {
     id: "t40",
     title: "Payments regression suite",
